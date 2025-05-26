@@ -29,6 +29,7 @@ body {
   flex-direction: column;
 }
 
+
 @media (max-width: 600px) {
   /* reset box y overflow  */
   html,
@@ -46,9 +47,13 @@ body {
 
   /* header phone */
   .header-app {
+    position: sticky;
+    height: 90%;
     flex-direction: column;
     align-items: center;
     padding: 0.5rem;
+    z-index: 1000;
+    
   }
   .name-logo .name {
     font-size: 1.5rem;
@@ -78,7 +83,7 @@ body {
     padding-left: 0 !important ;
     box-sizing: border-box;
   }
-
+  
   .events-list h2 {
     font-size: 1.25rem;
     margin: 1rem 0 0.5rem;
@@ -109,7 +114,6 @@ body {
   #events-list .event-location {
     display: none;
   }
-}
 
 /* userslist */
 .users-list {
@@ -118,22 +122,33 @@ body {
   gap: 0.5rem;
 }
 
-.community,
-.eventDetail {
+.community{
   flex-direction: column;
   gap: 1rem;
   padding: 0.5rem;
 }
 
+
+
 .eventDetail {
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: visible;
+  box-sizing: border-box;
+ 
 }
 .event-info {
-  overflow-x: hidden;
+   overflow-x:hidden ;
+   overflow-y: visible !important;
 
-  overflow-y: hidden;
 }
+
+.event-info #title {
+  padding-top: 2rem;
+  font-size: 2rem;
+
+}
+
+
 .community-list {
   padding: 0 1rem;
 }
@@ -172,8 +187,10 @@ body {
 }
 
 .profile-grid {
-  display: block;
+  gap: 0.5rem !important;
+  
 }
+
 .profile-info,
 .profile-form {
   width: 100%;
@@ -219,13 +236,20 @@ body {
   overflow-y: auto;
 }
 
-.create-event,
-.event-edit {
+.create-event{
   width: 100%;
   padding: 1rem;
   margin: 1rem 0;
   overflow-y: auto;
   max-height: calc(100vh - 120px);
+}
+
+.event-edit {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-y: auto;
+
 }
 .form-edit {
   display: flex;
@@ -266,6 +290,8 @@ body {
 }
 .footer-social {
   display: none;
+}
+
 }
 
 /* media para tablets */
@@ -330,8 +356,10 @@ body {
     padding: 0;
   }
   .eventDetail .event-edit {
-    padding: 2rem 2rem;
+    max-width: 600px;
+   
   }
+ 
   .community {
     flex-direction: row;
     align-items: flex-start;
