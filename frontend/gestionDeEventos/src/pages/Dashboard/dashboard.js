@@ -38,8 +38,9 @@ export default function Dashboard() {
         </section>
           
           `
-
-  ;(async () => {
+//fetch y render
+    
+  // IIFE para generar asyncronia manual"", sin necesidad de esperar una promesa
     try {
       // carga de eventos
       const events = await request('/events/get')
