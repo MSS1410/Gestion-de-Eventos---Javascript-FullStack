@@ -62,7 +62,7 @@ export default function Dashboard() {
           `
         })
         .join('')
-      // ★ Inyectamos aquí la lista de eventos ★
+           // debo pasar el listado de eventos y pintar el elemento generado, separo el momento plasmar el listado de los usuarios. separado
       document.getElementById('events-list').innerHTML = listHTML
 
       //USERS ASIDE
@@ -90,6 +90,6 @@ export default function Dashboard() {
         '<li>Error cargando usuarios</li>'
     }
   })()
-
+ // devuelvo el total 
   return html
 }
