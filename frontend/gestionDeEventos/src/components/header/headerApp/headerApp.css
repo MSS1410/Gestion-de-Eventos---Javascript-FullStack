@@ -1,0 +1,96 @@
+.header-app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.name-logo {
+  display: flex;
+  align-items: center;
+}
+
+.name-logo .name {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+  color: #333;
+}
+
+.name-logo .logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.nav-app {
+  display: flex;
+  align-items: center;
+}
+
+.nav-app a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-app a img.nav-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.nav-app a.logout-link img.nav-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-app a.logout-link {
+  padding: 0.25rem 0.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.nav-app a.me-icon img.nav-icon {
+  width: 55px;
+  height: 55px;
+}
+
+.nav-app a.cloudy-icon img.nav-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-app a:hover,
+.nav-app a:focus {
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .header-app {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .name-logo {
+    margin-bottom: 0.5rem;
+  }
+  .nav-app {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-app a {
+    margin: 0.25rem;
+  }
+}

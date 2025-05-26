@@ -1,0 +1,42 @@
+.create-event {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.create-event h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.create-event form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.create-event label {
+  margin-bottom: 1rem;
+}
+
+.create-event input,
+.create-event textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+.create-event button {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  background: #501776;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.create-event .eventMedia input #file-upload-button {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  background: #501776;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,136 @@
+.event-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  margin-bottom: 3rem;
+  gap: 1rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgb(234, 233, 233);
+}
+
+.event-info h2 {
+  text-align: center;
+
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.event-info p {
+  margin: 0.5rem 0;
+}
+
+.event-info #date {
+  font-size: 1.2rem;
+  color: purple;
+  font-weight: bold;
+}
+
+.event-info #location {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.event-info #description {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.event-info #attendBtn {
+  display: block;
+  margin: 0.5rem auto;
+  padding: 0.4rem 1.2rem;
+  background-color: #4a148c;
+  color: white;
+  font-weight: bold;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+/* admin control */
+
+.event-edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  overflow-y: auto;
+  background-color: rgb(229, 204, 204);
+  padding: 2rem 20rem;
+  padding-bottom: 5rem;
+  border-radius: 8px;
+}
+.event-edit h3 {
+  text-align: center;
+}
+.event-image {
+  width: 400px;
+  border-radius: 6px;
+  margin: 1rem 0;
+  object-fit: cover;
+}
+.saveBtn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem 0;
+  background: #4a148c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editEv {
+  width: 60%;
+  background: #4a148c;
+  border-radius: 10%;
+
+  padding: 5px;
+  cursor: pointer;
+  color: #f3f3f3;
+}
+
+.deleteEv {
+  width: 70%;
+  background: #671c1b;
+  border-radius: 10%;
+  cursor: pointer;
+  padding: 5px;
+  color: #fff;
+}
+.deleteEv:hover {
+  opacity: 0.6;
+}
+.admin-controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.form-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-edit label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+.form-edit input,
+.form-edit textarea {
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.event-edit label {
+  font-weight: bold;
+}
+.event-edit label .fondo {
+  font-weight: bold;
+  background-color: rgb(234, 233, 233);
+}

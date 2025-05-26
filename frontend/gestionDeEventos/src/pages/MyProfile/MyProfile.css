@@ -1,0 +1,161 @@
+/* Container general */
+.profile-container {
+  max-width: 960px;
+  margin: 2rem auto;
+
+  box-sizing: border-box;
+  padding-bottom: 4rem;
+}
+
+/* tittle */
+.profile-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #4a148c;
+}
+
+/* Grid dos col */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+}
+
+/* izquierda para informacion no edit*/
+.profile-info {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-wrapper {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.avatar-display {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.info-title {
+  margin-bottom: 1rem;
+}
+
+.info-title label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.info-info {
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* derecha para ediciones */
+.profile-form {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-title label {
+  display: block;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.form-title input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* buton form */
+.buttons-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 1rem;
+  text-align: right;
+  padding: 1rem;
+}
+
+/* Botones gen */
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+}
+/* selectivos */
+.btn-back {
+  background-color: #36628b;
+  color: #ffffff;
+}
+
+.btn-save {
+  background-color: #4a148c;
+  color: #f4f4f4;
+}
+
+.btn:hover {
+  opacity: 0.5;
+}
+
+.delete-account {
+  color: white;
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: center;
+  margin-top: 1rem;
+  background-color: rgb(108, 34, 34);
+  border-radius: 8px;
+}
+
+.delete-account:hover {
+  opacity: 0.6;
+}
+
+.profile-info {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Para que no crezca demasiado en móvil */
+@media (max-width: 600px) {
+  .delete-account {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Responsive: una columna en móvil */
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}

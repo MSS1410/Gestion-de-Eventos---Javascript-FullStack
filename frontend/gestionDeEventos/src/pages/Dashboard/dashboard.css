@@ -1,0 +1,167 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 2.5fr 0.5fr;
+  grid-template-rows: minmax(0, 1fr) auto; /* fila 1 contenido y fila dos para swipper */
+  gap: 1rem;
+  padding: 1rem;
+  min-height: 0;
+  box-sizing: border-box;
+  background-color: rgb(234, 233, 233);
+}
+
+/* adaptar el scroll sin que afecte al titulo */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: rgb(234, 233, 233);
+  padding: 1rem;
+  margin-left: 1rem;
+  overflow-y: auto;
+}
+.events-list h2 {
+  margin-top: 0;
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.events-list ul {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #ede2f2b8;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  list-style: none;
+}
+
+.events-list li {
+  padding: 0.5rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.event-date {
+  font-weight: 900 !important;
+  font-size: 1.4rem !important;
+  letter-spacing: 1px;
+  color: black !important;
+}
+.event-title {
+  margin-left: 2rem !important;
+  font-size: 1.8rem !important;
+  font-weight: 600;
+  color: #3e186c !important;
+}
+.event-location {
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.events-list li a {
+  text-decoration: none;
+}
+
+/* aside de usuarios con en los nombres de usuario  */
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  height: 95%;
+  background: rgb(64, 36, 115);
+  opacity: 0.9;
+
+  border-radius: 45px;
+  padding: 1rem;
+
+  color: #fff;
+  margin: 0;
+}
+
+.users-list h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.users-list ul {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.users-list li {
+  display: flex;
+  align-items: center;
+
+  letter-spacing: 1px;
+  padding: 0.75rem 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Avatar pequeño */
+.users-list img.avatar-img {
+  margin-left: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.75rem;
+}
+
+.users-list li:first-child {
+  border-top: none;
+}
+.users-list li:last-child {
+  border-bottom: none;
+}
+
+.users-list .user-name {
+  flex: 1;
+  text-align: center;
+}
+
+/* wrapper en flex para que se configure bien el swiper */
+.swiper-wrapper {
+  display: flex;
+  height: 150px;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  /* evitamos que se encoja desde swiper se marca el ancho correcto */
+}
+
+.events-swiper {
+  grid-column: 1 / -1;
+  overflow-x: hidden;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.swiper {
+  width: 100%;
+  height: 150px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-height: 100%;
+  width: auto;
+  object-fit: cover;
+}
