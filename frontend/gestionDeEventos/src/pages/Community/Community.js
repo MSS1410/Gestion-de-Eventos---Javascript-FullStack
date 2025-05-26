@@ -73,7 +73,11 @@ export default function Community() {
           })
           if (!isConfirmed) return
           try {
-            await request(`/users/${user.id}/delete`, { method: 'DELETE' })
+            //estoy eliminando al administrador cada vez que elimino a un usuario porque no estoy atacanto al target
+            
+           // await request(`/users/${user.id}/delete`, { method: 'DELETE' })
+
+            
             btn.closest('.community-card').remove()
           } catch (err) {
             Swal.fire('Error', err.message, 'error')
