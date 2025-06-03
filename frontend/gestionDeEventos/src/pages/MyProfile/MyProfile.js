@@ -186,7 +186,7 @@ export default function Profile() {
           title: 'Updated Profile Data',
           icon: 'success',
           timer: 2000,
-          showConfirmedButton: false
+          showConfirmButton: false
         })
         FormProfile.reset()
         loadUser()

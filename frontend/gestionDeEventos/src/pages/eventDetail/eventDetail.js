@@ -73,7 +73,7 @@ export default function EventDetail({ id }) {
             await Swal.fire({
               title: ' Confirmed attendance !',
               icon: 'success',
-              time: '2000',
+              timer: '2000',
               showConfirmButton: false
             })
             navigate('/dashboard')
@@ -82,7 +82,7 @@ export default function EventDetail({ id }) {
               title: ' Error confirming attendance',
               icon: 'error',
               text: er.message,
-              time: '2000',
+              timer: '2000',
               showConfirmButton: 'Got it!'
             })
           }
@@ -106,7 +106,7 @@ export default function EventDetail({ id }) {
 
             if (isConfirmed) {
               await request(`/events/${id}/delete`, { method: 'DELETE' })
-              await Swal.fire('Deleted Event', '', 'succes')
+              await Swal.fire('Deleted Event', '', 'success')
               navigate('/dashboard')
             }
           })

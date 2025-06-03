@@ -30,7 +30,7 @@ export default function Login() {
   // de alguna manera le digo, pon esta funcion a la cola de funciones encargadas de levantar el login. que sea lo ultimo. "macrotasks".
   setTimeout(() => {
     console.log(
-      ' Login listeners mounting, form=',
+      'Login list montados,formu:',
       document.getElementById('loginForm')
     )
     console.log('token')

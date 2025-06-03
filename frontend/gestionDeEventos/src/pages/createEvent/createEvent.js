@@ -64,8 +64,8 @@ export default function createEvent() {
 
         await Swal.fire({
           title: 'Event Posted!',
-          icon: 'succes',
-          time: '2000',
+          icon: 'success',
+          timer: '2000',
           showConfirmButton: false
         })
         navigate('/create-event')
@@ -74,7 +74,7 @@ export default function createEvent() {
           title: 'Error Posting Event',
           text: error.message,
           icon: 'error',
-          time: '2000',
+          timer: '2000',
           showConfirmButton: 'Got it!'
         })
       }

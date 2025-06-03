@@ -38,9 +38,9 @@ export default function Dashboard() {
         </section>
           
           `
-//fetch y render
-    
+  //fetch y render
   // IIFE para generar asyncronia manual"", sin necesidad de esperar una promesa
+  setTimeout(async () => {
     try {
       // carga de eventos
       const events = await request('/events/get')
@@ -50,20 +50,20 @@ export default function Dashboard() {
         .map((eve) => {
           const fecha = new Date(eve.date).toLocaleDateString()
           return `
-          <li>
-          <a href="/events/${eve._id}"
-          onclick="event.preventDefault(); navigate("/events/${eve._id}")"
-
-              <span class="event-date">${fecha}</span>
-            <span class="event-title">${eve.title} -</span>
-              <span class="event-location">${eve.location}</span>
-          
-          </a>
-          </li>
-          `
+            <li>
+            <a href="/events/${eve._id}"
+            onclick="event.preventDefault(); navigate("/events/${eve._id}")"
+  
+                <span class="event-date">${fecha}</span>
+              <span class="event-title">${eve.title} -</span>
+                <span class="event-location">${eve.location}</span>
+            
+            </a>
+            </li>
+            `
         })
         .join('')
-           // debo pasar el listado de eventos y pintar el elemento generado, separo el momento plasmar el listado de los usuarios. separado
+      // debo pasar el listado de eventos y pintar el elemento generado, separo el momento plasmar el listado de los usuarios. separado
       document.getElementById('events-list').innerHTML = listHTML
 
       //USERS ASIDE
@@ -72,9 +72,9 @@ export default function Dashboard() {
         .map(
           (user) =>
             `<li>
-          <img src="${user.avatarLink}" class="avatar-img" /> 
-          <span class=""user-name">${user.name}</span>
-          </li>`
+            <img src="${user.avatarLink}" class="avatar-img" /> 
+            <span class=""user-name">${user.name}</span>
+            </li>`
         )
         .join('')
       document.getElementById('users-list').innerHTML = usersHTML
@@ -90,7 +90,8 @@ export default function Dashboard() {
       document.getElementById('users-list').innerHTML =
         '<li>Error cargando usuarios</li>'
     }
-  })()
- // devuelvo el total 
+  }, 0)
+
+  // devuelvo el total
   return html
 }

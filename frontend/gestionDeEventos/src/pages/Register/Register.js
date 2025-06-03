@@ -44,8 +44,8 @@ export default function Register() {
 
         await Swal.fire({
           title: ' Account Created !',
-          icon: 'succes',
-          time: '2000',
+          icon: 'success',
+          timer: '2000',
           showConfirmButton: false
         })
         navigate('/login')
