@@ -14,29 +14,31 @@ El Backend expone una API REST protegida mediante JWT y gestiona la lógica de n
  
 Registro e inicio de sesión de usuarios.
 Gestión de perfiles de usuario (carga de avatar, edición de datos).
-CRUD completo sobre [entidad principal, por ejemplo: eventos, posts, productos].
+CRUD completo Usuarios Eventos.
 Autenticación y autorización con tokens JWT.
-Validación de datos y manejo de errores centralizado.
+Gestion de Eventos y otras funciones usuario administrador.
 
 
 # 🔧 Instalación y Configuración
 
-1. Clonar el Repositorio
+# 1. Clonar el Repositorio
    
    git clone https://github.com/MSS1410/Gestion-de-Eventos-Javascript-FullStack.git
-cd Gestion-de-Eventos-Javascript-FullStack
+   
+# 1.1 - cd Gestion-de-Eventos---Javascript-FullStack
 
-2.  Configurar e iniciar el Backend
-   cd backend
+
+
+# 2.  Configurar e iniciar el Backend
+
+   -- cd backend -- 
 
   cp .env.example .env
 *editelo y rellene con*
 
 MONGO_URI=mongodb+srv://maarcsesa:GestionDeEventos@clustergde.ats5apc.mongodb.net/?retryWrites=true&w=majority&appName=ClusterGDE
 
-
 JWT_SECRET=GestionDeEventos 
-
 PORT_BACKEND=5000
 
 CLOUDINARY_CLOUD_NAME=dhmrsz0cw
@@ -44,19 +46,25 @@ CLOUDINARY_API_KEY=162557192587135
 CLOUDINARY_API_SECRET=9rY28EquXMmAyFQFLUN5QEDXzhI
 
 
+
 # 2.3 Instale dependencias
 npm install
+
 
 # 2.4 Arranque el servidor en modo desarrollo
 npm run dev
 
 
-3. Configurar e iniciar el Frontend
 
+
+# 3. Configurar e iniciar el Frontend
+  
+-- frontEnd -- 
    cd ../frontend/gestionDeEventos
    cp .env.example .env
 
 *editelo y rellene con*   
+
 VITE_API_URL=http://localhost:5000/api
 
 NODE_ENV= development
@@ -67,15 +75,17 @@ npm install
 # 3.4 Levante la aplicación con Vite
 npm run dev
 
+
+
 # 4. 📦 Scripts útiles
 
-Backend
+- Backend -
 
 npm run dev → inicia con nodemon
 
 conectado a mongo y administrador encontrado
 
-Frontend
+- Frontend -
 
 npm run dev → arranca Vite en modo desarrollo
 
@@ -85,11 +95,15 @@ click en el enlace proporcionado
 
 # 5. Credenciales para administrador:
 
-	- email: etomic_off_admin@etomic.com
-	- password:etomic
+- email: etomic_off_admin@etomic.com
+- password:etomic
+  
+
  
 # 6. Credenciales para usuario
 
-	- email:mariagonza@gmail.com
-	- password:mariagonza
+- email:mariagonza@gmail.com
+- password:mariagonza
+
+# 7. Creacion de usuario disponible desde SignUp, en la vista login.
  
