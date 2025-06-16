@@ -34,7 +34,8 @@ Gestion de Eventos y otras funciones usuario administrador.
    -- cd backend -- 
 
   cp .env.example .env
-*editelo y rellene con*
+  
+- *editelo y rellene con* -
 
 MONGO_URI=mongodb+srv://maarcsesa:GestionDeEventos@clustergde.ats5apc.mongodb.net/?retryWrites=true&w=majority&appName=ClusterGDE
 
@@ -63,7 +64,7 @@ npm run dev
    cd ../frontend/gestionDeEventos
    cp .env.example .env
 
-*editelo y rellene con*   
+- *editelo y rellene con* -
 
 VITE_API_URL=http://localhost:5000/api
 
@@ -83,7 +84,9 @@ npm run dev
 
 npm run dev → inicia con nodemon
 
-conectado a mongo y administrador encontrado
+- en consola de usuario deberia aparecer:
+
+  conectado a mongo ✅ y administrador encontrado
 
 - Frontend -
 
