@@ -39,7 +39,6 @@ export default function Dashboard() {
           
           `
   //fetch y render
-  // IIFE para generar asyncronia manual"", sin necesidad de esperar una promesa
   setTimeout(async () => {
     try {
       // carga de eventos
