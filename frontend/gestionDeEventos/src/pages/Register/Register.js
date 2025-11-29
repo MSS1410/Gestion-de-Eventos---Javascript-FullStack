@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2'
-import './Register.css'
+import './register.css'
 import HeaderAuth from '../../components/header/headerAuth/HeaderAuth.js'
 import FooterAuth from '../../components/footer/footerAuth/footerAuth.js'
 import { request } from '../../services/api.js'
