@@ -1,5 +1,5 @@
 import { navigate } from '../../../app.js'
-import './HeaderApp.css'
+import './headerApp.css'
 
 export function logOut() {
   localStorage.removeItem('token')
